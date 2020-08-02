@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第三届全国大学生大数据技能竞赛初赛培训总结 | Kongho's Blog</title><meta name="description" content="第三届全国大学生大数据技能竞赛初赛培训总结一、竞赛内容 大数据环境建设能力 大数据平台调优与运维能力 数据采集与初步能力 数据采集及存储能力 数据分析，数据挖掘能力 数据可视化能力   二、集群搭建（新增slave3的动态增删）1.本地源介绍 Centos自带的YUM源更新太慢，可以使用更改本地源的方法来安装软件。  源文件的路径：etc&#x2F;yum.repos.d  配置本地Mysql源。通过比赛平"><meta name="keywords" content="bigdata"><meta name="author" content="kongho"><meta name="copyright" content="kongho"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://www.kongho.co/2020/08/02/%E7%AC%AC%E4%B8%89%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E5%9F%B9%E8%AE%AD%E6%80%BB%E7%BB%93/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="article"><meta property="og:title" content="第三届全国大学生大数据技能竞赛初赛培训总结"><meta property="og:url" content="http://www.kongho.co/2020/08/02/%E7%AC%AC%E4%B8%89%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E5%9F%B9%E8%AE%AD%E6%80%BB%E7%BB%93/"><meta property="og:site_name" content="Kongho's Blog"><meta property="og:description" content="第三届全国大学生大数据技能竞赛初赛培训总结一、竞赛内容 大数据环境建设能力 大数据平台调优与运维能力 数据采集与初步能力 数据采集及存储能力 数据分析，数据挖掘能力 数据可视化能力   二、集群搭建（新增slave3的动态增删）1.本地源介绍 Centos自带的YUM源更新太慢，可以使用更改本地源的方法来安装软件。  源文件的路径：etc&#x2F;yum.repos.d  配置本地Mysql源。通过比赛平"><meta property="og:image" content="https://w.wallhaven.cc/full/kw/wallhaven-kwov61.png"><meta property="article:published_time" content="2020-08-02T08:39:52.000Z"><meta property="article:modified_time" content="2020-08-02T10:09:33.612Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true,
+  postUpdate: '2020-08-02 18:09:33'
+}</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img {
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 5.0.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">2</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E8%83%BD%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E5%9F%B9%E8%AE%AD%E6%80%BB%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text">第三届全国大学生大数据技能竞赛初赛培训总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%AB%9E%E8%B5%9B%E5%86%85%E5%AE%B9"><span class="toc-number">1.1.</span> <span class="toc-text">一、竞赛内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA%EF%BC%88%E6%96%B0%E5%A2%9Eslave3%E7%9A%84%E5%8A%A8%E6%80%81%E5%A2%9E%E5%88%A0%EF%BC%89"><span class="toc-number">1.2.</span> <span class="toc-text">二、集群搭建（新增slave3的动态增删）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%9C%AC%E5%9C%B0%E6%BA%90%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.本地源介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.基础配置介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A0%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D%EF%BC%88%E4%B8%89%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%9D%87%E6%89%A7%E8%A1%8C%EF%BC%89"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">①修改主机名（三台机器均执行）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A1%E9%85%8D%E7%BD%AEhost%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%89%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%9D%87%E6%89%A7%E8%A1%8C%EF%BC%89"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">②配置host文件（三台机器均执行）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A2%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99%EF%BC%88%E4%B8%89%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%9D%87%E6%89%A7%E8%A1%8C%EF%BC%89"><span class="toc-number">1.2.2.3.</span> <span class="toc-text">③关闭防火墙（三台机器均执行）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A3%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5NTP%EF%BC%88%E4%B8%89%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%9D%87%E6%89%A7%E8%A1%8C%EF%BC%89"><span class="toc-number">1.2.2.4.</span> <span class="toc-text">④时间同步NTP（三台机器均执行）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.ssh远程登入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-JDK%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.4.</span> <span class="toc-text">4.JDK安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-zookeeper%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.5.</span> <span class="toc-text">5.zookeeper安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Hadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.6.</span> <span class="toc-text">6.Hadoop集群安装</span></a></li></ol></li></ol></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(https://w.wallhaven.cc/full/kw/wallhaven-kwov61.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Kongho's Blog</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">第三届全国大学生大数据技能竞赛初赛培训总结</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-08-02T08:39:52.000Z" title="Created 2020-08-02 16:39:52">2020-08-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-08-02T10:09:33.612Z" title="Updated 2020-08-02 18:09:33">2020-08-02</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h1 id="第三届全国大学生大数据技能竞赛初赛培训总结"><a href="#第三届全国大学生大数据技能竞赛初赛培训总结" class="headerlink" title="第三届全国大学生大数据技能竞赛初赛培训总结"></a>第三届全国大学生大数据技能竞赛初赛培训总结</h1><h2 id="一、竞赛内容"><a href="#一、竞赛内容" class="headerlink" title="一、竞赛内容"></a>一、竞赛内容</h2><ul>
+<li>大数据环境建设能力</li>
+<li>大数据平台调优与运维能力</li>
+<li>数据采集与初步能力</li>
+<li>数据采集及存储能力</li>
+<li>数据分析，数据挖掘能力</li>
+<li>数据可视化能力</li>
+</ul>
+<p><img src="C:\blog\public\img\2020-08-02_16-57-55.png" alt="image-20200802165524881"></p>
+<h2 id="二、集群搭建（新增slave3的动态增删）"><a href="#二、集群搭建（新增slave3的动态增删）" class="headerlink" title="二、集群搭建（新增slave3的动态增删）"></a>二、集群搭建（新增slave3的动态增删）</h2><h3 id="1-本地源介绍"><a href="#1-本地源介绍" class="headerlink" title="1.本地源介绍"></a>1.本地源介绍</h3><ul>
+<li><p>Centos自带的YUM源更新太慢，可以使用更改本地源的方法来安装软件。</p>
+</li>
+<li><p>源文件的路径：<code>etc/yum.repos.d</code></p>
+</li>
+<li><p>配置本地Mysql源。通过比赛平台提供mysql源文件下载路径，将本地源文件下载到etc/yum. repos. d/目录下</p>
+<ul>
+<li><p>发信号给yum进程 :</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pkill -9 yum</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>进入yum源配置文件:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /etc/yum.repos.d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除所有文件:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rm -rf *</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载yum源 :</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget http://172.31.5.55:8001/repo/repofile/bigdata.repo</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> ip和端口根据比赛要求更改</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>清除yum缓存 :</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum clean all</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="2-基础配置介绍"><a href="#2-基础配置介绍" class="headerlink" title="2.基础配置介绍"></a>2.基础配置介绍</h3><h4 id="①修改主机名（三台机器均执行）"><a href="#①修改主机名（三台机器均执行）" class="headerlink" title="①修改主机名（三台机器均执行）"></a>①修改主机名（三台机器均执行）</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hostnamectl set-hostname master</span><br><span class="line">bash</span><br><span class="line"></span><br><span class="line">hostnamectl set-hostname slave1</span><br><span class="line">bash</span><br><span class="line"></span><br><span class="line">hostnamectl set-hostname salve2</span><br><span class="line">bash</span><br></pre></td></tr></table></figure>
+
+<p>永久修改主机名，编辑/etc/sysconfig/network 文件，内容如下：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi /etc/sysconfig/network</span><br><span class="line"></span><br><span class="line">NETWORKING=yes</span><br><span class="line">HOSTNAME=master</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> slave1/2/3 修改同上</span></span><br></pre></td></tr></table></figure>
+
+<p>下载相关工具：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum install -y net-tools</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="②配置host文件（三台机器均执行）"><a href="#②配置host文件（三台机器均执行）" class="headerlink" title="②配置host文件（三台机器均执行）"></a>②配置host文件（三台机器均执行）</h4><ul>
+<li>使各个节点能使用对应的节点主机名连接对应的地址。</li>
+<li>hosts 文件主要用于确定每个结点的 IP 地址，方便后续各结点能快速查到并访问。在 3<br>个虚机结点上均需要配置此文件。</li>
+<li>查看节点地址之后将三个节点的 ip 地址以及其对应的名称写进 hosts 文件。这里我们<br>设置为 master、slave1、slave2。注意保存退出。</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 方法一</span></span><br><span class="line">vi /etc/hosts</span><br><span class="line"></span><br><span class="line">192.168.170.143 master</span><br><span class="line">192.168.170.144 slave1                # ip 地址根据比赛更改</span><br><span class="line">192.168.170.145 slave2</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 方法二</span></span><br><span class="line">echo &quot;172.18.52.40 master master.root&quot; &gt;&gt; /etc/hosts</span><br><span class="line">echo &quot;172.18.52.41 slave1 slave1.root&quot; &gt;&gt; /etc/hosts</span><br><span class="line">echo &quot;172.18.52.47 slave2 slave2.root&quot; &gt;&gt; /etc/hosts</span><br><span class="line"> </span><br><span class="line">cat /etc/hosts                #最好查看一些以防错误</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 分发到slave1和slave2</span></span><br><span class="line">scp -r /etc/hosts root@slave1:/etc</span><br><span class="line">scp -r /etc/hosts root@slave2:/etc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="③关闭防火墙（三台机器均执行）"><a href="#③关闭防火墙（三台机器均执行）" class="headerlink" title="③关闭防火墙（三台机器均执行）"></a>③关闭防火墙（三台机器均执行）</h4><p>centos7 中防火墙命令用 firewalld 取代了 iptables，当其状态是 dead 时，即防火墙关闭</p>
+<ul>
+<li><p>关闭防火墙：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看状态：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<hr>
+<h4 id="④时间同步NTP（三台机器均执行）"><a href="#④时间同步NTP（三台机器均执行）" class="headerlink" title="④时间同步NTP（三台机器均执行）"></a>④时间同步NTP（三台机器均执行）</h4><ul>
+<li>选择时区</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tzselect</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>tzselect命令只告诉你选择的时区的写法，并不会生效。所以现在它还不是东8区北京时间。</li>
+<li>设置TZ环境变量</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 方法一</span></span><br><span class="line">vi /etc/profile</span><br><span class="line">TZ=&#x27;Asia/Shanghai&#x27;; export TZ</span><br><span class="line"></span><br><span class="line">source /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 方法二</span></span><br><span class="line">echo &quot;TZ=&#x27;Asia/Shanghai&#x27;; export TZ&quot; &gt;&gt; /etc/profile</span><br><span class="line"></span><br><span class="line">source /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 方法三（快速选择时区）</span></span><br><span class="line">timedatectl set-timezone Asia/Shanghai</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装ntp</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum install -y ntp</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>master作为时钟源，修改master上的配置文件 (在master上执行)</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 方法一</span></span><br><span class="line">vi /etc/ntp.conf</span><br><span class="line"></span><br><span class="line">server 127.127.1.0</span><br><span class="line">fudhe 127.127.1.0 stratum</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 方法二</span></span><br><span class="line">echo -e &#x27;server 127.127.1.0\nfudge 127.127.1.0 stratum 10&#x27; &gt;&gt;/etc/ntp.conf</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>重启ntp服务：（在master上执行）</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/bin/systemctl restart ntpd.service</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>其他机器同步（slave1，slave2）</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">crontab -e</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加：</span></span><br><span class="line"></span><br><span class="line">*/30 8-17 * * * /usr/sbin/ntpdate master</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\blog\public\img\2020-08-02_18-04-49.png" alt="2020-08-02_18-04-49"></p>
+<h3 id="3-ssh远程登入"><a href="#3-ssh远程登入" class="headerlink" title="3.ssh远程登入"></a>3.ssh远程登入</h3><h3 id="4-JDK安装"><a href="#4-JDK安装" class="headerlink" title="4.JDK安装"></a>4.JDK安装</h3><h3 id="5-zookeeper安装"><a href="#5-zookeeper安装" class="headerlink" title="5.zookeeper安装"></a>5.zookeeper安装</h3><h3 id="6-Hadoop集群安装"><a href="#6-Hadoop集群安装" class="headerlink" title="6.Hadoop集群安装"></a>6.Hadoop集群安装</h3></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">kongho</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://www.kongho.co/2020/08/02/%E7%AC%AC%E4%B8%89%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E5%9F%B9%E8%AE%AD%E6%80%BB%E7%BB%93/">http://www.kongho.co/2020/08/02/%E7%AC%AC%E4%B8%89%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E5%9F%B9%E8%AE%AD%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/bigdata/">bigdata</a></div><div class="post_share"><div class="social-share" data-image="https://w.wallhaven.cc/full/kw/wallhaven-kwov61.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2020/08/02/hello-world/"><img class="next-cover" data-lazy-src="https://w.wallhaven.cc/full/kw/wallhaven-kwov61.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Hello World</div></div></a></div></nav></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By kongho</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://www.kongho.co/">blog</a>!</div><div class="icp"><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/state/outPortal/loginPortal.action"><img class="icp-icon" src="/img/icp.png"/><span>京ICP备567359</span></a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font_plus" type="button" title="Increase Font Size"><i class="fas fa-plus"></i></button><button id="font_minus" type="button" title="Decrease Font Size"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
