@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第三届全国大学生大数据技能竞赛初赛培训总结 | Kongho's Blog</title><meta name="description" content="第三届全国大学生大数据技能竞赛初赛培训总结一、竞赛内容 大数据环境建设能力 大数据平台调优与运维能力 数据采集与初步能力 数据采集及存储能力 数据分析，数据挖掘能力 数据可视化能力   二、集群搭建（新增slave3的动态增删）1.本地源介绍 Centos自带的YUM源更新太慢，可以使用更改本地源的方法来安装软件。  源文件的路径：etc&#x2F;yum.repos.d  配置本地Mysql源。通过比赛平"><meta name="keywords" content="bigdata"><meta name="author" content="kongho"><meta name="copyright" content="kongho"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://www.kongho.co/2020/08/02/%E7%AC%AC%E4%B8%89%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E5%9F%B9%E8%AE%AD%E6%80%BB%E7%BB%93/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="article"><meta property="og:title" content="第三届全国大学生大数据技能竞赛初赛培训总结"><meta property="og:url" content="http://www.kongho.co/2020/08/02/%E7%AC%AC%E4%B8%89%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E5%9F%B9%E8%AE%AD%E6%80%BB%E7%BB%93/"><meta property="og:site_name" content="Kongho's Blog"><meta property="og:description" content="第三届全国大学生大数据技能竞赛初赛培训总结一、竞赛内容 大数据环境建设能力 大数据平台调优与运维能力 数据采集与初步能力 数据采集及存储能力 数据分析，数据挖掘能力 数据可视化能力   二、集群搭建（新增slave3的动态增删）1.本地源介绍 Centos自带的YUM源更新太慢，可以使用更改本地源的方法来安装软件。  源文件的路径：etc&#x2F;yum.repos.d  配置本地Mysql源。通过比赛平"><meta property="og:image" content="https://w.wallhaven.cc/full/kw/wallhaven-kwov61.png"><meta property="article:published_time" content="2020-08-02T08:39:52.000Z"><meta property="article:modified_time" content="2020-08-02T10:09:33.612Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第三届全国大学生大数据技能竞赛初赛培训总结 | Kongho's Blog</title><meta name="description" content="第三届全国大学生大数据技能竞赛初赛培训总结一、竞赛内容 大数据环境建设能力 大数据平台调优与运维能力 数据采集与初步能力 数据采集及存储能力 数据分析，数据挖掘能力 数据可视化能力   二、集群搭建（新增slave3的动态增删）1.本地源介绍 Centos自带的YUM源更新太慢，可以使用更改本地源的方法来安装软件。  源文件的路径：etc&#x2F;yum.repos.d  配置本地Mysql源。通过比赛平"><meta name="keywords" content="bigdata"><meta name="author" content="kongho"><meta name="copyright" content="kongho"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://www.kongho.co/2020/08/02/%E7%AC%AC%E4%B8%89%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E5%9F%B9%E8%AE%AD%E6%80%BB%E7%BB%93/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="article"><meta property="og:title" content="第三届全国大学生大数据技能竞赛初赛培训总结"><meta property="og:url" content="http://www.kongho.co/2020/08/02/%E7%AC%AC%E4%B8%89%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E5%9F%B9%E8%AE%AD%E6%80%BB%E7%BB%93/"><meta property="og:site_name" content="Kongho's Blog"><meta property="og:description" content="第三届全国大学生大数据技能竞赛初赛培训总结一、竞赛内容 大数据环境建设能力 大数据平台调优与运维能力 数据采集与初步能力 数据采集及存储能力 数据分析，数据挖掘能力 数据可视化能力   二、集群搭建（新增slave3的动态增删）1.本地源介绍 Centos自带的YUM源更新太慢，可以使用更改本地源的方法来安装软件。  源文件的路径：etc&#x2F;yum.repos.d  配置本地Mysql源。通过比赛平"><meta property="og:image" content="http://www.kongho.co/img/image05.png"><meta property="article:published_time" content="2020-08-02T08:39:52.000Z"><meta property="article:modified_time" content="2020-08-03T04:46:46.763Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
   document.documentElement.setAttribute('data-theme', 'dark')
   if (document.querySelector('meta[name="theme-color"]') !== null) {
     document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
@@ -89,7 +89,7 @@ if (autoChangeMode === '1') {
   isHome: false,
   isHighlightShrink: false,
   isSidebar: true,
-  postUpdate: '2020-08-02 18:09:33'
+  postUpdate: '2020-08-03 12:46:46'
 }</script><noscript><style>
 #nav {
   opacity: 1
@@ -97,7 +97,7 @@ if (autoChangeMode === '1') {
 .justified-gallery img {
   opacity: 1
 }
-</style></noscript><meta name="generator" content="Hexo 5.0.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">2</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E8%83%BD%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E5%9F%B9%E8%AE%AD%E6%80%BB%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text">第三届全国大学生大数据技能竞赛初赛培训总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%AB%9E%E8%B5%9B%E5%86%85%E5%AE%B9"><span class="toc-number">1.1.</span> <span class="toc-text">一、竞赛内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA%EF%BC%88%E6%96%B0%E5%A2%9Eslave3%E7%9A%84%E5%8A%A8%E6%80%81%E5%A2%9E%E5%88%A0%EF%BC%89"><span class="toc-number">1.2.</span> <span class="toc-text">二、集群搭建（新增slave3的动态增删）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%9C%AC%E5%9C%B0%E6%BA%90%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.本地源介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.基础配置介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A0%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D%EF%BC%88%E4%B8%89%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%9D%87%E6%89%A7%E8%A1%8C%EF%BC%89"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">①修改主机名（三台机器均执行）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A1%E9%85%8D%E7%BD%AEhost%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%89%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%9D%87%E6%89%A7%E8%A1%8C%EF%BC%89"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">②配置host文件（三台机器均执行）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A2%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99%EF%BC%88%E4%B8%89%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%9D%87%E6%89%A7%E8%A1%8C%EF%BC%89"><span class="toc-number">1.2.2.3.</span> <span class="toc-text">③关闭防火墙（三台机器均执行）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A3%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5NTP%EF%BC%88%E4%B8%89%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%9D%87%E6%89%A7%E8%A1%8C%EF%BC%89"><span class="toc-number">1.2.2.4.</span> <span class="toc-text">④时间同步NTP（三台机器均执行）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.ssh远程登入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-JDK%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.4.</span> <span class="toc-text">4.JDK安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-zookeeper%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.5.</span> <span class="toc-text">5.zookeeper安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Hadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.6.</span> <span class="toc-text">6.Hadoop集群安装</span></a></li></ol></li></ol></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(https://w.wallhaven.cc/full/kw/wallhaven-kwov61.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Kongho's Blog</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">第三届全国大学生大数据技能竞赛初赛培训总结</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-08-02T08:39:52.000Z" title="Created 2020-08-02 16:39:52">2020-08-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-08-02T10:09:33.612Z" title="Updated 2020-08-02 18:09:33">2020-08-02</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h1 id="第三届全国大学生大数据技能竞赛初赛培训总结"><a href="#第三届全国大学生大数据技能竞赛初赛培训总结" class="headerlink" title="第三届全国大学生大数据技能竞赛初赛培训总结"></a>第三届全国大学生大数据技能竞赛初赛培训总结</h1><h2 id="一、竞赛内容"><a href="#一、竞赛内容" class="headerlink" title="一、竞赛内容"></a>一、竞赛内容</h2><ul>
+</style></noscript><meta name="generator" content="Hexo 5.0.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">2</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E8%83%BD%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E5%9F%B9%E8%AE%AD%E6%80%BB%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text">第三届全国大学生大数据技能竞赛初赛培训总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%AB%9E%E8%B5%9B%E5%86%85%E5%AE%B9"><span class="toc-number">1.1.</span> <span class="toc-text">一、竞赛内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA%EF%BC%88%E6%96%B0%E5%A2%9Eslave3%E7%9A%84%E5%8A%A8%E6%80%81%E5%A2%9E%E5%88%A0%EF%BC%89"><span class="toc-number">1.2.</span> <span class="toc-text">二、集群搭建（新增slave3的动态增删）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%9C%AC%E5%9C%B0%E6%BA%90%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.本地源介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.基础配置介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A0%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D%EF%BC%88%E4%B8%89%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%9D%87%E6%89%A7%E8%A1%8C%EF%BC%89"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">①修改主机名（三台机器均执行）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A1%E9%85%8D%E7%BD%AEhost%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%89%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%9D%87%E6%89%A7%E8%A1%8C%EF%BC%89"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">②配置host文件（三台机器均执行）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A2%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99%EF%BC%88%E4%B8%89%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%9D%87%E6%89%A7%E8%A1%8C%EF%BC%89"><span class="toc-number">1.2.2.3.</span> <span class="toc-text">③关闭防火墙（三台机器均执行）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A3%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5NTP%EF%BC%88%E4%B8%89%E5%8F%B0%E6%9C%BA%E5%99%A8%E5%9D%87%E6%89%A7%E8%A1%8C%EF%BC%89"><span class="toc-number">1.2.2.4.</span> <span class="toc-text">④时间同步NTP（三台机器均执行）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5-%E4%BB%85%E9%9C%80%E8%A6%81%E4%B8%BB%E8%8A%82%E7%82%B9%E5%88%B0%E4%BB%8E%E8%8A%82%E7%82%B9%E4%B9%8B%E9%97%B4"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.ssh远程登入(仅需要主节点到从节点之间)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-JDK%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.4.</span> <span class="toc-text">4.JDK安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-zookeeper%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.5.</span> <span class="toc-text">5.zookeeper安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Hadoop%E9%9B%86%E7%BE%A4%E5%AE%89%E8%A3%85%EF%BC%88hdfs%E5%92%8Cyard%E4%BC%AA%E9%9B%86%E7%BE%A4%EF%BC%89"><span class="toc-number">1.2.6.</span> <span class="toc-text">6.Hadoop集群安装（hdfs和yard伪集群）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#hadoop-env-sh"><span class="toc-number">1.2.6.1.</span> <span class="toc-text">hadoop-env.sh</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#yard-env-sh"><span class="toc-number">1.2.6.2.</span> <span class="toc-text">yard-env.sh</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#core-site-xml"><span class="toc-number">1.2.6.3.</span> <span class="toc-text">core-site.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hdfs-site-xml"><span class="toc-number">1.2.6.4.</span> <span class="toc-text">hdfs-site.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mapred-site-xml"><span class="toc-number">1.2.6.5.</span> <span class="toc-text">mapred-site xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#yarn-site-xml"><span class="toc-number">1.2.6.6.</span> <span class="toc-text">yarn-site.xml</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-hadoop%E5%8A%A8%E6%80%81%E5%A2%9E%E5%88%A0%E8%8A%82%E7%82%B9"><span class="toc-number">1.2.7.</span> <span class="toc-text">7.hadoop动态增删节点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A0%E5%A2%9E%E5%8A%A0%E8%8A%82%E7%82%B9"><span class="toc-number">1.2.7.1.</span> <span class="toc-text">①增加节点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A1%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9"><span class="toc-number">1.2.7.2.</span> <span class="toc-text">②删除节点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-Hadoop%E9%9B%86%E7%BE%A4%E5%88%9D%E4%BD%93%E9%AA%8C"><span class="toc-number">1.2.8.</span> <span class="toc-text">8.Hadoop集群初体验</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A0WordCount%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1%E6%A1%88%E4%BE%8B"><span class="toc-number">1.2.8.1.</span> <span class="toc-text">①WordCount单词统计案例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A1PI%E6%A1%88%E4%BE%8B"><span class="toc-number">1.2.8.2.</span> <span class="toc-text">②PI案例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-Hive%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA%EF%BC%88%E8%80%83%E6%A0%B8%E8%BF%9C%E7%A8%8B%E6%A8%A1%E5%BC%8F%EF%BC%89"><span class="toc-number">1.2.9.</span> <span class="toc-text">10.Hive集群搭建（考核远程模式）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85mysql-slave2%E6%88%96slave3%E4%B8%8A%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.9.1.</span> <span class="toc-text">安装mysql(slave2或slave3上安装)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hive%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2"><span class="toc-number">1.2.9.2.</span> <span class="toc-text">hive安装部署</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E6%95%B0%E6%8D%AE%E9%85%8D%E7%BD%AE-%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AFslave1"><span class="toc-number">1.2.9.3.</span> <span class="toc-text">元数据配置(服务器端slave1)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE-master"><span class="toc-number">1.2.9.4.</span> <span class="toc-text">客户端配置(master)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8hive"><span class="toc-number">1.2.9.5.</span> <span class="toc-text">启动hive</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E4%B8%8E%E9%A2%84%E5%A4%84%E7%90%86%E3%80%81%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E4%B8%8E%E5%AD%98%E5%82%A8"><span class="toc-number">1.3.</span> <span class="toc-text">三、数据采集与预处理、数据采集与存储</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%88%AC%E5%8F%96-shopxo%E5%95%86%E5%9F%8E"><span class="toc-number">1.3.1.</span> <span class="toc-text">数据爬取(shopxo商城)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8"><span class="toc-number">1.3.2.</span> <span class="toc-text">数据存储</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90"><span class="toc-number">1.3.3.</span> <span class="toc-text">数据分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%95%B0%E6%8D%AE%E5%85%B3%E8%81%94%E3%80%81%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E3%80%81%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">1.4.</span> <span class="toc-text">四、数据关联、数据挖掘、数据可视化</span></a></li></ol></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(/img/image05.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Kongho's Blog</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">第三届全国大学生大数据技能竞赛初赛培训总结</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-08-02T08:39:52.000Z" title="Created 2020-08-02 16:39:52">2020-08-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-08-03T04:46:46.763Z" title="Updated 2020-08-03 12:46:46">2020-08-03</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h1 id="第三届全国大学生大数据技能竞赛初赛培训总结"><a href="#第三届全国大学生大数据技能竞赛初赛培训总结" class="headerlink" title="第三届全国大学生大数据技能竞赛初赛培训总结"></a>第三届全国大学生大数据技能竞赛初赛培训总结</h1><h2 id="一、竞赛内容"><a href="#一、竞赛内容" class="headerlink" title="一、竞赛内容"></a>一、竞赛内容</h2><ul>
 <li>大数据环境建设能力</li>
 <li>大数据平台调优与运维能力</li>
 <li>数据采集与初步能力</li>
@@ -105,7 +105,7 @@ if (autoChangeMode === '1') {
 <li>数据分析，数据挖掘能力</li>
 <li>数据可视化能力</li>
 </ul>
-<p><img src="C:\blog\public\img\2020-08-02_16-57-55.png" alt="image-20200802165524881"></p>
+<p><img src="/img/image01.png" alt="image01"></p>
 <h2 id="二、集群搭建（新增slave3的动态增删）"><a href="#二、集群搭建（新增slave3的动态增删）" class="headerlink" title="二、集群搭建（新增slave3的动态增删）"></a>二、集群搭建（新增slave3的动态增删）</h2><h3 id="1-本地源介绍"><a href="#1-本地源介绍" class="headerlink" title="1.本地源介绍"></a>1.本地源介绍</h3><ul>
 <li><p>Centos自带的YUM源更新太慢，可以使用更改本地源的方法来安装软件。</p>
 </li>
@@ -132,7 +132,6 @@ if (autoChangeMode === '1') {
 </ul>
 </li>
 </ul>
-<hr>
 <h3 id="2-基础配置介绍"><a href="#2-基础配置介绍" class="headerlink" title="2.基础配置介绍"></a>2.基础配置介绍</h3><h4 id="①修改主机名（三台机器均执行）"><a href="#①修改主机名（三台机器均执行）" class="headerlink" title="①修改主机名（三台机器均执行）"></a>①修改主机名（三台机器均执行）</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hostnamectl set-hostname master</span><br><span class="line">bash</span><br><span class="line"></span><br><span class="line">hostnamectl set-hostname slave1</span><br><span class="line">bash</span><br><span class="line"></span><br><span class="line">hostnamectl set-hostname salve2</span><br><span class="line">bash</span><br></pre></td></tr></table></figure>
 
 <p>永久修改主机名，编辑/etc/sysconfig/network 文件，内容如下：</p>
@@ -141,15 +140,13 @@ if (autoChangeMode === '1') {
 <p>下载相关工具：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum install -y net-tools</span><br></pre></td></tr></table></figure>
 
-<hr>
 <h4 id="②配置host文件（三台机器均执行）"><a href="#②配置host文件（三台机器均执行）" class="headerlink" title="②配置host文件（三台机器均执行）"></a>②配置host文件（三台机器均执行）</h4><ul>
 <li>使各个节点能使用对应的节点主机名连接对应的地址。</li>
 <li>hosts 文件主要用于确定每个结点的 IP 地址，方便后续各结点能快速查到并访问。在 3<br>个虚机结点上均需要配置此文件。</li>
 <li>查看节点地址之后将三个节点的 ip 地址以及其对应的名称写进 hosts 文件。这里我们<br>设置为 master、slave1、slave2。注意保存退出。</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 方法一</span></span><br><span class="line">vi /etc/hosts</span><br><span class="line"></span><br><span class="line">192.168.170.143 master</span><br><span class="line">192.168.170.144 slave1                # ip 地址根据比赛更改</span><br><span class="line">192.168.170.145 slave2</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 方法二</span></span><br><span class="line">echo &quot;172.18.52.40 master master.root&quot; &gt;&gt; /etc/hosts</span><br><span class="line">echo &quot;172.18.52.41 slave1 slave1.root&quot; &gt;&gt; /etc/hosts</span><br><span class="line">echo &quot;172.18.52.47 slave2 slave2.root&quot; &gt;&gt; /etc/hosts</span><br><span class="line"> </span><br><span class="line">cat /etc/hosts                #最好查看一些以防错误</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 分发到slave1和slave2</span></span><br><span class="line">scp -r /etc/hosts root@slave1:/etc</span><br><span class="line">scp -r /etc/hosts root@slave2:/etc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 方法一</span></span><br><span class="line">vi /etc/hosts</span><br><span class="line"></span><br><span class="line">192.168.15.104 master master.root</span><br><span class="line">192.168.15.127 slave1 slave1.root                # ip根据比赛更改</span><br><span class="line">192.168.15.124 slave2 slave2.root</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 方法二</span></span><br><span class="line">echo &quot;172.18.52.40 master master.root&quot; &gt;&gt; /etc/hosts</span><br><span class="line">echo &quot;172.18.52.41 slave1 slave1.root&quot; &gt;&gt; /etc/hosts</span><br><span class="line">echo &quot;172.18.52.47 slave2 slave2.root&quot; &gt;&gt; /etc/hosts</span><br><span class="line"> </span><br><span class="line">cat /etc/hosts                #最好查看一些以防错误</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 分发到slave1和slave2</span></span><br><span class="line">scp -r /etc/hosts root@slave1:/etc</span><br><span class="line">scp -r /etc/hosts root@slave2:/etc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<hr>
 <h4 id="③关闭防火墙（三台机器均执行）"><a href="#③关闭防火墙（三台机器均执行）" class="headerlink" title="③关闭防火墙（三台机器均执行）"></a>③关闭防火墙（三台机器均执行）</h4><p>centos7 中防火墙命令用 firewalld 取代了 iptables，当其状态是 dead 时，即防火墙关闭</p>
 <ul>
 <li><p>关闭防火墙：</p>
@@ -160,7 +157,6 @@ if (autoChangeMode === '1') {
 
 </li>
 </ul>
-<hr>
 <h4 id="④时间同步NTP（三台机器均执行）"><a href="#④时间同步NTP（三台机器均执行）" class="headerlink" title="④时间同步NTP（三台机器均执行）"></a>④时间同步NTP（三台机器均执行）</h4><ul>
 <li>选择时区</li>
 </ul>
@@ -192,5 +188,519 @@ if (autoChangeMode === '1') {
 </ul>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">crontab -e</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加：</span></span><br><span class="line"></span><br><span class="line">*/30 8-17 * * * /usr/sbin/ntpdate master</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\blog\public\img\2020-08-02_18-04-49.png" alt="2020-08-02_18-04-49"></p>
-<h3 id="3-ssh远程登入"><a href="#3-ssh远程登入" class="headerlink" title="3.ssh远程登入"></a>3.ssh远程登入</h3><h3 id="4-JDK安装"><a href="#4-JDK安装" class="headerlink" title="4.JDK安装"></a>4.JDK安装</h3><h3 id="5-zookeeper安装"><a href="#5-zookeeper安装" class="headerlink" title="5.zookeeper安装"></a>5.zookeeper安装</h3><h3 id="6-Hadoop集群安装"><a href="#6-Hadoop集群安装" class="headerlink" title="6.Hadoop集群安装"></a>6.Hadoop集群安装</h3></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">kongho</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://www.kongho.co/2020/08/02/%E7%AC%AC%E4%B8%89%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E5%9F%B9%E8%AE%AD%E6%80%BB%E7%BB%93/">http://www.kongho.co/2020/08/02/%E7%AC%AC%E4%B8%89%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E5%9F%B9%E8%AE%AD%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/bigdata/">bigdata</a></div><div class="post_share"><div class="social-share" data-image="https://w.wallhaven.cc/full/kw/wallhaven-kwov61.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2020/08/02/hello-world/"><img class="next-cover" data-lazy-src="https://w.wallhaven.cc/full/kw/wallhaven-kwov61.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Hello World</div></div></a></div></nav></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By kongho</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://www.kongho.co/">blog</a>!</div><div class="icp"><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/state/outPortal/loginPortal.action"><img class="icp-icon" src="/img/icp.png"/><span>京ICP备567359</span></a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font_plus" type="button" title="Increase Font Size"><i class="fas fa-plus"></i></button><button id="font_minus" type="button" title="Decrease Font Size"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
+<p><img src="/img/image02.png" alt="image02"></p>
+<h3 id="3-ssh远程登入-仅需要主节点到从节点之间"><a href="#3-ssh远程登入-仅需要主节点到从节点之间" class="headerlink" title="3.ssh远程登入(仅需要主节点到从节点之间)"></a>3.ssh远程登入(仅需要主节点到从节点之间)</h3><p>目的：将 ssh/id rsa.pub（公钥）放到其他机器上的 authorized keys中。</p>
+<!--注意：Master节点特殊，需要把自身的公钥拷贝到自身的 authorized keys中。-->
+
+<ul>
+<li>输入<code>ssh- keygen</code>，一路默认回车，也可以直接执行：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t dsa -P &#x27;&#x27; -f ~/.ssh/id_dsa</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将生成的公钥文件复制到授权列表:</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat id_dsa.pub &gt;&gt; authorized_keys</span><br><span class="line"></span><br><span class="line">cp id_dsa.pub authorized_keys</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将该授权文件 authorized keys文件复制到 slaves中的节点：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp ./authorized_keys root@slave1:~/.ssh/</span><br><span class="line">scp ./authorized_keys root@slave2:~/.ssh/</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>检查免密登入是否设置成功：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh master</span><br><span class="line">ssh slave1</span><br><span class="line">ssh slave2</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 退出</span></span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-JDK安装"><a href="#4-JDK安装" class="headerlink" title="4.JDK安装"></a>4.JDK安装</h3><ul>
+<li>创建工作目录</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir -p /usr/java</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>下载软件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget http:&#x2F;&#x2F;XXXX&#x2F;repo&#x2F;bigdata_tar&#x2F;jdk-8u171-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>解压</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf jdk-8u171-linux-x64.tar.gz -C /usr/java/</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除安装包（非必要）</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rm -rf /usr/java/jdk-8u171-inux-X64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>配置环境变量</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi /etc/profile</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/usr/java/jdk1.8.0_171</span><br><span class="line">export CLASSPATH=$JAVA_HOME/lib/</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin</span><br><span class="line">export PATH JAVA_HOME CLASSPATH</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>生效环境变量</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>分发环境变量文件至slave1与slave2</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp -r /etc/profile root@slave1:/etc</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在slave1和slave2上生效环境变量</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>分发JDK包至slave1与slave2</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp -r /usr/java root@slave1:/usr</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看Java版本</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-zookeeper安装"><a href="#5-zookeeper安装" class="headerlink" title="5.zookeeper安装"></a>5.zookeeper安装</h3><ul>
+<li>创建zookeeper工作路径</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir -p /usr/zookeeper</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>下载zookeeper</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget http://XXXX/repo/bigdata_tar/zookeeper-3.4.10.tar.gz</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>解压</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf /usr/zookeeper/zookeeper-3.4.10.tar.gz -C /usr/zookeeper</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在zookeeper的目录中，创建配置中所需的 zkdata和 zkdatalog两个文件夹。（在 master执行）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;usr&#x2F;zookeeper&#x2F;zookeeper-3.4.10</span><br><span class="line"></span><br><span class="line">mkdir zkdata</span><br><span class="line">mkdir zkdatalog</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>配置文件zoo.cfg</p>
+<ul>
+<li>进入zookeeper配置文件夹conf，将 zoo_sample. cfg文件拷贝一份命名为 zoo. cfg, Zookeeper在启动时会找这个文件作为默认配置文件。</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/zookeeper/zookeeper-3.4.10/conf/</span><br><span class="line">mv zoo_sample.cfg zoo.cfg</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>对zoo.cfg文件配置如下：（在 master执行）</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim zoo.cfg</span><br><span class="line"></span><br><span class="line">tickTime=2000 </span><br><span class="line">initLimit=10</span><br><span class="line">syncLimit=5</span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改</span></span><br><span class="line">dataDir=/usr/zookeeper/zookeeper-3.4.10/zkdata</span><br><span class="line"></span><br><span class="line">clientPort=2181</span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加</span></span><br><span class="line">dataLogDir=/usr/zookeeper/zookeeper-3.4.10/zkdatalog        </span><br><span class="line">server.1=master:2888:3888</span><br><span class="line">server.2=slave1:2888:3888</span><br><span class="line">server.3=slave2:2888:3888</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>进入 zkdata文件夹，创建文件myid，用于表示是几号服务器。 master主机中，设置服务器id为1。（集群中设置 master为l号服务器， slaver为2号服务器， slave2为3号服务器</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/zookeeper/zookeeper-3.4.10/zkdata</span><br><span class="line">vim myid </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>远程复制分发到slave1和slave2</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp -r /usr/zookeeper root@slave1:/usr/</span><br><span class="line">scp -r /usr/zookeeper root@slave1:/usr/</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在slave2和slave3中设置myid分别为2，3</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/zookeeper/zookeeper-3.4.10/zkdata</span><br><span class="line">vim myid</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置zookeeper环境变量</p>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi /etc/profile</span><br><span class="line"></span><br><span class="line">export ZOOKEEPER_HOME=/usr/zookeeper/zookeeper-3.4.10 </span><br><span class="line">PATH=$PATH:$ZOOKEEPER_HOME/bin </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>分发环境变量到slave1和slave2</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp -r /etc/profile root@slave1:/etc </span><br><span class="line">scp -r /etc/profile root@slave2:/etc</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在slave1和slave2上生效环境变量</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启动 ZooKeeper集群。在 ZooKeeper集群的每个结点上，执行启动 ZooKeeper服务的脚本。注意在z0 keeper目录下：（三台机器都执行）</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd $ZOOKEEPER_HOME</span><br><span class="line"> </span><br><span class="line"><span class="meta">#</span><span class="bash"> 开启服务： （三台机器都开启后再查看状态）</span></span><br><span class="line"></span><br><span class="line">bin/zkServer.sh start    </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">查看状态：</span></span><br><span class="line"></span><br><span class="line">bin/zkServer.sh status</span><br></pre></td></tr></table></figure>
+
+<p>一个节点是 Leader，其余的结点是 Follower。至此， zookeeper安装成功。</p>
+<h3 id="6-Hadoop集群安装（hdfs和yard伪集群）"><a href="#6-Hadoop集群安装（hdfs和yard伪集群）" class="headerlink" title="6.Hadoop集群安装（hdfs和yard伪集群）"></a>6.Hadoop集群安装（hdfs和yard伪集群）</h3><ul>
+<li>创建对应工作目录/usr/hadoop：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir -p /usr/hadoop</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>下载hadoop</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget http://172.31.5.55:8001/repo/bigdata_tar/hadoop-2.7.3.tar.gz</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>解压</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf hadoop-2.7.3.tar.gz -C /usr/hadoop/</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>配置环境变量</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"></span><br><span class="line">export HADOOP_HOME=/usr/hadoop/hadoop-2.7.3</span><br><span class="line">export CLASSPATH=$CLASSPATH:$HADOOP_HOME/lib</span><br><span class="line">export PATH=$PATH:$HADOOP_HOME/bin</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>生效环境变量</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>分发环境变量文件至slave1与slave2</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp -r /etc/profile root@slave1:/etc</span><br><span class="line">scp -r /etc/profile root@slave1:/etc</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在slave1和slave2上生效环境变量</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p><img src="/img/image03.png" alt="image03"></p>
+<p><img src="/img/image04.png" alt="image04"></p>
+<h4 id="hadoop-env-sh"><a href="#hadoop-env-sh" class="headerlink" title="hadoop-env.sh"></a>hadoop-env.sh</h4><ul>
+<li>编辑 hadoop 环境配置文件 hadoop-env.sh</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd $HADOOP_HOME/etc/hadoop</span><br><span class="line">vi hadoop-env.sh</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/usr/java/jdk1.8.0_171</span><br></pre></td></tr></table></figure>
+
+<h4 id="yard-env-sh"><a href="#yard-env-sh" class="headerlink" title="yard-env.sh"></a>yard-env.sh</h4><ul>
+<li>编辑yard-env.sh</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi $HADOOP_HOME/etc/hadoop/yarn-env.sh</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/usr/java/jdk1.8.0_171</span><br></pre></td></tr></table></figure>
+
+<h4 id="core-site-xml"><a href="#core-site-xml" class="headerlink" title="core-site.xml"></a>core-site.xml</h4><ul>
+<li>编辑core-site.xml</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">vi core-site.xml</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.default.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>hdfs://master:9000<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.tmp.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>/usr/hadoop/hadoop-2.7.3/hdfs/tmp<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">description</span>&gt;</span>A base for other temporary directories.<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>io.file.buffer.size<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>131072<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.checkpoint.period<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>60<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.checkpoint.size<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>67108864<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="hdfs-site-xml"><a href="#hdfs-site-xml" class="headerlink" title="hdfs-site.xml"></a>hdfs-site.xml</h4><ul>
+<li>编辑hdfs-site.xml</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">vi hdfs-site.xml</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.replication<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>2<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.namenode.name.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>file:/usr/hadoop/hadoop-2.7.3/hdfs/name<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">final</span>&gt;</span>true<span class="tag">&lt;/<span class="name">final</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.datanode.data.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>file:/usr/hadoop/hadoop-2.7.3/hdfs/data<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">final</span>&gt;</span>true<span class="tag">&lt;/<span class="name">final</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.namenode.secondary.http-address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>master:9001<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.webhdfs.enabled<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>true<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.permissions<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>false<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="mapred-site-xml"><a href="#mapred-site-xml" class="headerlink" title="mapred-site xml"></a>mapred-site xml</h4><ul>
+<li>编辑 mapred-site xml。hadoop是没有这个文件的，需要将 mapred-site.xml.template样本文件复制为 mapred-site. xml，对其进行编辑</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">cp mapred-site.xml.template mapred-site.xml</span><br><span class="line">vim mapred-site.xml</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.framework.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>yarn<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="yarn-site-xml"><a href="#yarn-site-xml" class="headerlink" title="yarn-site.xml"></a>yarn-site.xml</h4><ul>
+<li>编辑yarn-site.xml</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">vi yarn-site.xml</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>master:18040<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.scheduler.address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>master:18030<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.webapp.address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>master:18088<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.resource-tracker.address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>master:18025<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.admin.address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>master:18141<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.aux-services<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>mapreduce_shuffle<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.auxservices.mapreduce.shuffle.class<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">value</span>&gt;</span>org.apache.hadoop.mapred.ShuffleHandler<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>编写master 文件</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi master</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加master</span></span><br><span class="line"></span><br><span class="line">master</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>编写slaves文件</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi slaves</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加slave1和slave2</span></span><br><span class="line"></span><br><span class="line">slave1</span><br><span class="line">slave2</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>分发Hadoop到slave1和salve2</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp -r &#x2F;usr&#x2F;hadoop root@slave1:&#x2F;usr&#x2F;</span><br><span class="line">scp -r &#x2F;usr&#x2F;hadoop root@slave2:&#x2F;usr&#x2F;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在 master中格式化 hadoop，开启 hadoop。（仅在 master中进行操作）</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hadoop namenode -format</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 当出现“ Exiting with status0”的时候，表明格式化成功。</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>主节点格式化成功之后，就可以在主节点中开启 hadoop集群。仅在 master主机上开启操作命令。它会带起从节点的启动。（仅在 master中进行操作）</p>
+<ul>
+<li>回到hadoop目录</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/hadoop/hadoop-2.7.3</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>主节点开启服务</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sbin&#x2F;start-all.sh</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>验证jps</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">jsp</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="7-hadoop动态增删节点"><a href="#7-hadoop动态增删节点" class="headerlink" title="7.hadoop动态增删节点"></a>7.hadoop动态增删节点</h3><h4 id="①增加节点"><a href="#①增加节点" class="headerlink" title="①增加节点"></a>①增加节点</h4><ul>
+<li>进行相关配置：<ul>
+<li>1，基础操作本地源，防火墙，时区，同步时间等；</li>
+<li>2，修改主机文件所有文件添加save3</li>
+<li>3，免密操作 master-&gt; slave3</li>
+<li>4，安装 JDK Hadoop配置环境变量</li>
+<li>5,  修改所有的 slaves文件：添加slave3</li>
+<li>6,  启动 DataNode进程：hadoop-daemon.sh启动 datanode</li>
+<li>7,  启动 nodemanage:yarn-deamon. sh启动 nodemanager</li>
+<li>8,  主节点刷新：hdfs dfsadmin -refreshNodes</li>
+<li>9,  均衡块：sbin/ start-balancer.sh</li>
+<li>10, 查看存活的议员：hdfs dfsadmin -report</li>
+</ul>
+</li>
+</ul>
+<h4 id="②删除节点"><a href="#②删除节点" class="headerlink" title="②删除节点"></a>②删除节点</h4><ul>
+<li>hadoop- daemon.sh停止 datanode</li>
+<li>hadoop- daemon.sh停止 tasktracker</li>
+</ul>
+<p>master主机中hdfs- site xm配置</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span> dfs.hosts.exclude <span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>/usr/hadoop/hadoop-2.7.3/etc/hadoop/excludes<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">description</span>&gt;</span>拒绝加入重建的例程列表<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.hosts<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>/usr/hadoop/hadoop-2.7.3/etc/hadoop/datanode-allow.list<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">description</span>&gt;</span>允许加入合并的例程列表<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在conf目录下创建一个排除文件，将需要删除的异步机器名添加到文件中</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim /usr/hadoop/hadoop-2.7.3/etc/hadoop/</span><br><span class="line"></span><br><span class="line">slave2</span><br></pre></td></tr></table></figure>
+
+<p>主节点刷新所有 DataNode: hdfs dfsadmin -refreshNodes</p>
+<p>查看存活的议员：hdfs dfsadmin -report</p>
+<p>可以看到该 datanode状态转为退役中。（退役）<br>执行完毕之后显示退役状态：退役</p>
+<p>删除摘要上关闭进程：（ slave2）<br>sbin/hadoop-daemon.sh停止 datanode </p>
+<p>sbin/yarn-daemon.sh停止 nodemanager</p>
+<p>数据块重新分布：sbin/ start-balancer.sh（数据均衡）<br>从 NameNode的文件和从属文件，主机文件中去掉已经可移动的主机名</p>
+<p>在所有 Datanode上执行 hadoop-pull.sh脚本，同步配置。</p>
+<h3 id="8-Hadoop集群初体验"><a href="#8-Hadoop集群初体验" class="headerlink" title="8.Hadoop集群初体验"></a>8.Hadoop集群初体验</h3><h4 id="①WordCount单词统计案例"><a href="#①WordCount单词统计案例" class="headerlink" title="①WordCount单词统计案例"></a>①WordCount单词统计案例</h4><ul>
+<li>在本机的/root目录下，新建一个名为 data 的文件夹，然后再执行“vim word.txt” 指令新建一个 word.txt 文本文件，并编写一些单词内容。</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir /root/data</span><br><span class="line">vi word.txt</span><br><span class="line"></span><br><span class="line">hello world </span><br><span class="line">hadoop hdfs</span><br><span class="line">mapreduce hadoop hdfs hdfs</span><br><span class="line">hfds hello</span><br><span class="line">hadoop</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>接着，在 HDFS 上创建 /wordcount/input 目录，并将 word.txt 文件上传至该目录下</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hadoop fs -mkdir -p /wordcount/input</span><br><span class="line">hadoop fs -put /root/data/word.txt /wordcount/input</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>进入$HADOOP_HOME/share/hadoop/mapreduce/ 目录下，使用ll 指令查看文件夹内容</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd $HADOOP_HOME/share/hadoop/mapreduce/</span><br><span class="line">ll</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在该文件夹下自带了很多 Hadoop 的 MapReduce 示例程序。其中，hadoop-mapreduce-examples-2.7.7.jar 包中包含了计算单词个数、计算PI值等功能的程序</li>
+<li>这里可以直接使用 hadoop-mapreduce-examples-2.7.7.jar 示例包，对 HDFS 上的 word.txt 文件进行单词统计，在 jar 包位置执行如下命令：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hadoop jar hadoop-mapreduce-examples-2.7.7.jar wordcount /wordcount/input/word.txt /wordcount/output</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>hadoop jar hadoop-mapreduce-examples-2.7.7.jar ：表示执行一个Hadoop的jar包程序；</p>
+</li>
+<li><p>wordcount：表示执行jar包程序中的单词统计功能；</p>
+</li>
+<li><p>/wordcount/input/word.txt：表示进行单词统计的HDFS文件路径；</p>
+</li>
+<li><p>/wordcount/output：表示进行单词统计后的输出HDFS结果路径。</p>
+</li>
+<li><p>使用 HDFS Shell 的相关指令查看 part-r-00000 的内容</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hadoop fs -cat /wordcount/output/part-r-00000</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="②PI案例"><a href="#②PI案例" class="headerlink" title="②PI案例"></a>②PI案例</h4><ul>
+<li>进入 $HADOOP_HOME/share/hadoop/mapreduce/ 目录下，使用如下指<br>令计算 PI 值：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd $HADOOP_HOME/share/hadoop/mapreduce/ </span><br><span class="line">hadoop jar hadoop-mapreduce-examples-2.7.7.jar pi 5 5</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>hadoop jar hadoop-mapreduce-examples-2.7.7.jar ：表示执行一个</li>
+<li>Hadoop的jar包程序；</li>
+<li>pi：表示执行jar包程序中计算PI值的功能；</li>
+<li>第1个5：表示运行10次map任务；</li>
+<li>第2个5：表示每个map任务，投掷的次数</li>
+</ul>
+<h3 id="10-Hive集群搭建（考核远程模式）"><a href="#10-Hive集群搭建（考核远程模式）" class="headerlink" title="10.Hive集群搭建（考核远程模式）"></a>10.Hive集群搭建（考核远程模式）</h3><p><img src="/img/image07.png" alt="image07"></p>
+<h4 id="安装mysql-slave2或slave3上安装"><a href="#安装mysql-slave2或slave3上安装" class="headerlink" title="安装mysql(slave2或slave3上安装)"></a>安装mysql(slave2或slave3上安装)</h4><ul>
+<li><p>安装mysql</p>
+<ul>
+<li>下载mysql</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum -y install mysql-community-server</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启动mysql服务</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 重载所有修改过的配置文件</span></span><br><span class="line">systemctl daemon-reload</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 开启服务</span></span><br><span class="line">systemctl start mysqld</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 开机自启</span></span><br><span class="line">systemctl enable mysqld</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>随机密码登入mysql</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 获取初始化密码（随机密码）</span></span><br><span class="line">grep &quot;temporary password&quot; /var/log/mysql.log</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 登入mysql</span></span><br><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>密码策略（设置密码）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 设置密码强度为低级</span><br><span class="line">set global validate_password_policy&#x3D;0;</span><br><span class="line"></span><br><span class="line"># 设置密码长度</span><br><span class="line">set global validate_password_length&#x3D;4;</span><br><span class="line"></span><br><span class="line"># 修改本地密码</span><br><span class="line">alter user &#39;root&#39;@&#39;localhost&#39; identified by &#39;123456&#39;;</span><br><span class="line"></span><br><span class="line"># 退出</span><br><span class="line">\q</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>授权远程登录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 新密码登录mysql</span><br><span class="line">mysql -uroot -p123456</span><br><span class="line"></span><br><span class="line"># 创建用户</span><br><span class="line">create user &#39;root&#39;@&#39;%&#39; identified by &#39;123456&#39;;</span><br><span class="line"></span><br><span class="line"># 允许远程连接</span><br><span class="line">grant all privileges on *.* to &#39;root&#39;@&#39;%&#39; with grant option;</span><br><span class="line"></span><br><span class="line"># 刷新权限</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建数据库</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">create database hive;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="hive安装部署"><a href="#hive安装部署" class="headerlink" title="hive安装部署"></a>hive安装部署</h4><ul>
+<li><p>hive安装部署（服务器（slave1）和客户端（master）都执行）</p>
+<ul>
+<li>解压安装包</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf apache-hive-2.3.4-bin.tar.gz</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>配置环境变量</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 配置Hive的安装目录 </span></span><br><span class="line">export HIVE_HOME=/root/software/apache-hive-2.3.4-bin</span><br><span class="line"><span class="meta">#</span><span class="bash"> 在原PATH的基础上加入Hive的bin目录</span></span><br><span class="line">export PATH=$PATH:$HIVE_HOME/bin</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>生效环境变量</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看hive版本</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hive --version</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修改配置文件 hive-env.sh</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 切换到 <span class="variable">$&#123;HIVE_HOME&#125;</span>/conf 目录下</span></span><br><span class="line">cd $&#123;HIVE_HOME&#125;/conf</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 将 hive-env.sh.template 文件复制一份并重命名为 hive-env.sh</span></span><br><span class="line">cp hive-env.sh.template hive-env.sh</span><br><span class="line"></span><br><span class="line">vi hive-env.sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 配置Hadoop安装路径</span></span><br><span class="line">HADOOP_HOME=/root/software/hadoop-2.7.7</span><br><span class="line"><span class="meta">#</span><span class="bash"> 配置Hive配置文件存放路径</span></span><br><span class="line">export HIVE_CONF_DIR=/root/software/apache-hive-2.3.4-bin/conf</span><br><span class="line"><span class="meta">#</span><span class="bash"> 配置Hive运行资源库路径</span></span><br><span class="line">export HIVE_AUX_JARS_PATH=/root/software/apache-hive-2.3.4-bin/lib</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="元数据配置-服务器端slave1"><a href="#元数据配置-服务器端slave1" class="headerlink" title="元数据配置(服务器端slave1)"></a>元数据配置(服务器端slave1)</h4><ul>
+<li><p>元数据配置到mysql</p>
+<ul>
+<li>驱动拷贝</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> mysql-connector-java是mysql的jdbc驱动包</span></span><br><span class="line">wget -P $HIVEHOME/lib/ http://.../mysql-connector-java-5.1.47-bin.jar</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>服务器端配置hive-site.xml</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">vi hive-site.xml</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--Hive产生的元数据存放位置 --&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>hive.metastore.warehouse.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>/user/hive_remote/warehouse<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--数据库连接JDBC的URL地址--&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>javax.jdo.option.ConnectionURL<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>jdbc:mysql://slave2:3306/hive?createDatabaseIfNotExist=true<span class="symbol">&amp;amp;</span>useSSL=false<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--数据库连接driver，即mysql驱动--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>javax.jdo.option.ConnectionDriverName<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>com.mysql.jdbc.Driver<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--连接数据库用户名称 --&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>javax.jdo.option.ConnectionUserName<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>root<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--连接数据库用户密码 --&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">name</span>&gt;</span>javax.jdo.option.ConnectionPassword<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>123456<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="客户端配置-master"><a href="#客户端配置-master" class="headerlink" title="客户端配置(master)"></a>客户端配置(master)</h4><ul>
+<li>jline版本冲突</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cp $HIVEHOME/lib/jline-2.12.jar $HADOOP-HOME/share/hadoop/yarn/lib/</span><br><span class="line">rm -rf $HADOOP_HOME/share/hadoop/yarn/lib/xxx.xjar</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>客户端hive-site.xml</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">vi hive-site.xml</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--Hive产生的元数据存放位置--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>hive.metastore.warehouse.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>/user/hive_remote/warehouse<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--使用本地服务连接Hive，默认为true--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>hive.metastore.local<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>false<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--连接服务器--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>hive.metastore.uris<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>thrift://slave1:9083<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="启动hive"><a href="#启动hive" class="headerlink" title="启动hive"></a>启动hive</h4><ul>
+<li>初始化数据库</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">schematool -dbType mysql -initSchema</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启动hive server</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hive --service metastore (&amp;)(加&amp;在后台运行)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启动客户端</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hive</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、数据采集与预处理、数据采集与存储"><a href="#三、数据采集与预处理、数据采集与存储" class="headerlink" title="三、数据采集与预处理、数据采集与存储"></a>三、数据采集与预处理、数据采集与存储</h2><h3 id="数据爬取-shopxo商城"><a href="#数据爬取-shopxo商城" class="headerlink" title="数据爬取(shopxo商城)"></a>数据爬取(shopxo商城)</h3><ul>
+<li><p>requests库</p>
+<ul>
+<li>requests是 python实现的简单易用的HTTP库</li>
+<li>安装 request库</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
+
+<pre><code>- requests练习</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">response = requests.get(<span class="string">&#x27;URL&#x27;</span>)   <span class="comment">#请求目标网站</span></span><br><span class="line">print(response.status_code)  <span class="comment"># 打印状态码</span></span><br><span class="line">print(response.url)          <span class="comment"># 打印请求url</span></span><br><span class="line">print(response.headers)      <span class="comment"># 打印头信息</span></span><br><span class="line">print(response.cookies)      <span class="comment"># 打印cookie信息</span></span><br><span class="line">print(response.text)         <span class="comment">#以文本形式打印网页源码</span></span><br><span class="line">print(response.content)      <span class="comment">#以字节流形式打印</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>- 状态码（status_code）</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取的信息包括状态码，状态码会展示请求状态（服务器状态）。</span></span><br><span class="line"><span class="comment"># 用于判断URL是否合法。</span></span><br><span class="line"><span class="comment"># 200：请求成功，返回请求数据</span></span><br><span class="line"><span class="comment"># 在代码中使用这些信息来做判断</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> response.status_code == <span class="number">200</span>:</span><br><span class="line">    print(Success!)</span><br><span class="line"><span class="keyword">elif</span> response.status_code == <span class="number">404</span>:</span><br><span class="line">    print(Not Found.)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>响应内容</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># GET请求的响应通常在消息体中具有一些有价值的信息，称为有效负载。</span></span><br><span class="line"><span class="comment"># .content：以字节方式查看响应内容</span></span><br><span class="line"><span class="comment"># .text：文本形式（字符串）</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">reponse = requests.get(<span class="string">&#x27;url&#x27;</span>)</span><br><span class="line">print(response.text)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>xpath</p>
+<ul>
+<li>跟re、bs4一样，Xpah也可以进行页面数据提取。xpath是根据元素的路径来查找页面元素。</li>
+<li>前提：安装lxml包</li>
+<li>lxml是一款高性能的 Python HTML/XML解析器，利用 XPath，可以快速的定位特定元素以及获取节点信息。</li>
+<li>xpath练习</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">reponse = requests.get(<span class="string">&#x27;http://localhost/shopxo/index.php?s=/index/goods/index/id/4162.html&#x27;</span>)</span><br><span class="line">print(reponse.status_code)</span><br><span class="line"><span class="comment">#200</span></span><br><span class="line">print(reponse.text)           <span class="comment">#获得源码</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree        <span class="comment">#导入lxml库的etree模块</span></span><br><span class="line">html = reponse.text</span><br><span class="line"><span class="comment">#加载整个文档进行解析</span></span><br><span class="line">element = etree.HTML(html)          <span class="comment">#声明HTML文本，调用HTML类进行初始化</span></span><br><span class="line">title = element.xpath(<span class="string">&#x27;/html/body/div[4]/div[2]/div[2]/div[1]/h1&#x27;</span>)            <span class="comment">#根据xpath路径，定位目标数据</span></span><br><span class="line">print(title)         <span class="comment">#打印变量</span></span><br><span class="line"><span class="comment">#[&lt;Element h1 at 0x7f65c6e644b0&gt;]   ~~~~       #列表</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#通过索引值来访问特定的子元素</span></span><br><span class="line">print(title[<span class="number">0</span>].text)</span><br><span class="line"></span><br><span class="line"><span class="comment">#                    联想ThinkPad E14 锐龙版（1TCD）14英寸轻薄笔记本电脑（锐龙5-4500U 16G 512GSSD IPS高分屏）黑色 </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/img/image06.png" alt="image06"></p>
+</li>
+<li><p>URl限定条件</p>
+<ul>
+<li>最大id:  max_tid=?</li>
+<li>url满足条件如下：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 判断url是否合法，是否可联通，http状态码是否为200</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_url_content</span>(<span class="params">url</span>):</span></span><br><span class="line">    response = requests.get(url)</span><br><span class="line">    <span class="keyword">if</span> response.status_code == <span class="number">200</span>:</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&quot;资源不存在或已被删除&quot;</span> <span class="keyword">in</span> response.text:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="comment"># 如果可以连通返回网页源代码</span></span><br><span class="line">            html = etree.HTML(response.text)</span><br><span class="line">            <span class="keyword">return</span> html</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.根据要求爬取数据</span><br><span class="line">2.将数据写入hive</span><br><span class="line">    1）根据自己数据格式建表（分隔符等）</span><br><span class="line">3对数据进行分析</span><br><span class="line">    1）数据分片</span><br><span class="line">    2）浏览排名</span><br><span class="line">    3）...</span><br></pre></td></tr></table></figure>
+
+<h3 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h3><ul>
+<li>将数据上传至hdfs指定路径</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 创建指定文件夹，将数据上传至hdfs指定目录/college/下</span></span><br><span class="line">hadoop fs -mkdir -p /college</span><br><span class="line">hadoop fs -put /root/college/loan.csv/college/</span><br><span class="line">hadoop fs -ls /college/</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建hive表，并将本地数据信息导入</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 建库:</span></span><br><span class="line">create database hive; </span><br><span class="line">use hive;</span><br><span class="line"><span class="meta">#</span><span class="bash"> 建表:</span></span><br><span class="line">create table loan（？？？）</span><br><span class="line"><span class="meta">#</span><span class="bash"> ？如何建表？</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 我们只需要一部分数据。</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 将本地数据导入至对应表中。</span></span><br><span class="line">load data local inpath &#x27;/root/college/loan.csv&#x27;into table loan;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">统计表数据结果写入本地/root/college0001/中。</span></span><br><span class="line">insert overwrite local directory &#x27;/root/college000/01/&#x27;</span><br><span class="line">row format delimited fields terminated by &#x27;\t&#x27; </span><br><span class="line">Select count(*) from loan;</span><br></pre></td></tr></table></figure>
+
+<h3 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h3><ul>
+<li>创建表获取指定格式、指定信息(数据分析)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 1.在整体借款数据中，计算信用得分 ProsperScore对于借款的影响（以信用得分为变量，统计借款次数）即了解大多数借款人的信用得分。</span><br><span class="line">select ProsperScore,count(*) as sum from loan</span><br><span class="line">group by ProsperScore</span><br><span class="line">oreder by sum by desc;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 2.找出借款较容易的行业前五及对应借款次数；（借款次数）</span><br><span class="line">select occupation,count(*) as sum from loan</span><br><span class="line">group by occupation</span><br><span class="line">oreder by sum by desc limit 5;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 3.当款率在哪些范围内，贷款成功（按照区间进行统计）</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 4.分析在货款状态为违约（ Defaulted）的就业情况；</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>count等函数能够进行数据分析</li>
+</ul>
+<h2 id="四、数据关联、数据挖掘、数据可视化"><a href="#四、数据关联、数据挖掘、数据可视化" class="headerlink" title="四、数据关联、数据挖掘、数据可视化"></a>四、数据关联、数据挖掘、数据可视化</h2><ul>
+<li>关联规则</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">关联规则：用于表示数据内隐含的关联性。</span><br><span class="line">定义一个关联规则：</span><br><span class="line">A→B</span><br><span class="line">其中A和B表示的是两个互斥事件，A称为前因（ antecedent），B称为后果（ consequent），上述关联规则表示A会导致B。</span><br><span class="line"></span><br><span class="line">关联规则分析（ Association Rule Analysis）就是为了发掘购物数据背后的商机而诞生的。</span><br><span class="line">例如：购买尿布的人往往会购买啤酒。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">公式参考如下：</span><br><span class="line">前项：A 后项：B</span><br><span class="line"></span><br><span class="line">支持度：表示同时包含A和B的事务占所有事务的比例。如果用P（A）表示使用A事务的比例。 Support&#x3D;P（A&amp;B）</span><br><span class="line"></span><br><span class="line">置信度：表示使用包含A的事务中同时包含B事务的比例，即同时包含A和B的事务占包含A事务的比例。 Confidence&#x3D;P（A&amp;B）&#x2F;P（A）</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">请根据 Apriori关联规则算法的原理找出与违约最多的（借款状态，后项）之间的关联度最强的职业（前项），并计算出其支持度与置信度。要求如下：</span><br><span class="line">支持度写到本地&#x2F; root&#x2F;college009中（保留五位小数）</span><br><span class="line">置信度写到本地&#x2F; root&#x2F;college010&#x2F;中（保留五位小数）。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">支持度：</span><br><span class="line">1） select count(*) from loan;    #结果A</span><br><span class="line"></span><br><span class="line">2）违约--后项</span><br><span class="line">LoanStatus&#x3D;&#39;Defaulted&#39;</span><br><span class="line"></span><br><span class="line">3）关联度最强的职业-前项</span><br><span class="line">select occupation,count(*) as total from loan</span><br><span class="line">where LoanStatus&#x3D;&#39;Defaulted&#39;</span><br><span class="line">group by occupation</span><br><span class="line">order by total desc limit1;    #结果B</span><br><span class="line"></span><br><span class="line">4）支持度</span><br><span class="line">insert overwrite local directory &#39;&#x2F;root&#x2F;college009&#x2F;&#39; select round(B&#x2F;A,5);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 合并语句</span><br><span class="line">SELECT round(((t2.s&#x2F;t4.s),5)</span><br><span class="line">FROM (select t1.occupation,count(*) as s from loan t1</span><br><span class="line">where t1.LoanStatus&#x3D;&#39;Defaulted&#39;</span><br><span class="line">group by t1.occupation </span><br><span class="line">order by s desc, t1 occupation asc limit 1</span><br><span class="line">)t2</span><br><span class="line">JOIN (select count(*) as s from loan t3)t4;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>数据可视化展示<ul>
+<li>统计借款状态，并制作饼状图。– echarts</li>
+<li>使用 JSON. stringify()方法将 Java Script对象转换为字符串</li>
+</ul>
+</li>
+</ul>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">kongho</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://www.kongho.co/2020/08/02/%E7%AC%AC%E4%B8%89%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E5%9F%B9%E8%AE%AD%E6%80%BB%E7%BB%93/">http://www.kongho.co/2020/08/02/%E7%AC%AC%E4%B8%89%E5%B1%8A%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E5%9F%B9%E8%AE%AD%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/bigdata/">bigdata</a></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2020/08/02/hello-world/"><img class="next-cover" data-lazy-src="https://w.wallhaven.cc/full/kw/wallhaven-kwov61.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Hello World</div></div></a></div></nav></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By kongho</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://www.kongho.co/">blog</a>!</div><div class="icp"><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/state/outPortal/loginPortal.action"><img class="icp-icon" src="/img/icp.png"/><span>京ICP备567359</span></a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font_plus" type="button" title="Increase Font Size"><i class="fas fa-plus"></i></button><button id="font_minus" type="button" title="Decrease Font Size"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
